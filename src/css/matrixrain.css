@@ -1,0 +1,15 @@
+/* matrixrain.css */
+.matrix-rain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Atur z-index ke -1 agar efek Matrix Rain ada di belakang konten */
+  }
+  
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  

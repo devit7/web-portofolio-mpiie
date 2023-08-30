@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Tambahkan efek glowing */
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+}
+  
+/* Tambahkan efek glowing */
+.glowing-text {
+    animation: glowing 1.5s infinite;
+}
+/* glow saat hover*/
+.glowing-text2:hover {
+    animation: glowing 1.0s infinite;
+}
+/* glow tiap 3 detik*/
+.glowing-text3 {
+    animation: glowing 3.0s infinite;
+}
+
+/* Efek glow pada teks ketika cursor di atasnya */
+.text-glow:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Glow biasah */
+    .glow {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4741ff, 0 0 40px #3261fb, 0 0 50px #4741ff, 0 0 60px #4741ff, 0 0 70px #4741ff;
+    }
