@@ -12,6 +12,7 @@ import Project from './pages/Projects.js';
 import NotFound from './pages/NotFound.js';
 import Secret from './pages/Secret.js';
 import Kda from './pages/Kda.js';
+import Test from './pages/Test';
 import MatrixRain from './components/MatrixRain';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/project" element={<Project />} />
         <Route exact path="/secret" element={<Secret />} />
         <Route exact path="/kda" element={<Kda />} />
+        <Route exact path="/test" element={<Test />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
