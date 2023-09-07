@@ -30,7 +30,7 @@ Ini adalah situs web portofolio pribadi saya yang dirancang untuk menampilkan pe
 
 ## Cara Menggunakan Situs
 
-Anda dapat mengakses situs ini melalui tautan berikut: [My Own Website](https://contohlinkwebsiteanda.com)
+Anda dapat mengakses situs ini melalui tautan berikut: [My Own Website](https://mpiie.my.id)
 
 ## Kontribusi
 
@@ -38,7 +38,7 @@ Kami sangat menghargai kontribusi! Jika Anda ingin berkontribusi pada situs web 
 
 ## Lisensi
 
-Proyek ini dilisensikan di bawah [Nama Lisensi Anda]. Silakan merujuk ke file [LICENSE](LICENSE) untuk informasi lebih lanjut.
+Proyek ini dilisensikan di bawah [Mpiie Corporation]. Silakan merujuk ke file [LICENSE](LICENSE) untuk informasi lebih lanjut.
 
 Terima kasih telah mengunjungi My Own Website!
 
