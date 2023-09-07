@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# My Own Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![My Own Website](https://lh3.googleusercontent.com/drive-viewer/AITFw-wlliI3wJKoEazuaQAAvUVVNOw6T-LwztIFiw9TcVDpBwAkrqBauQVSl1FVz52kEpgo97LzwxTv5gJXuJ7FXcI7qjeAbQ=s1600)
 
-## Available Scripts
+Ini adalah situs web portofolio pribadi saya yang dirancang untuk menampilkan pekerjaan saya. Saya telah mengembangkan situs web ini dengan menggunakan teknologi berikut:
 
-In the project directory, you can run:
+- **Front-end**: Saya menggunakan React untuk mengembangkan antarmuka pengguna (UI) yang ramah pengguna dan responsif. Tailwind CSS digunakan untuk mengatur tata letak dan gaya tampilan.
 
-### `npm start`
+- **Back-end**: Saya membangun backend dengan menggunakan Laravel untuk menyediakan admin panel dan mengelola data portofolio saya.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Database**: Data portofolio saya disimpan di MySQL untuk pengelolaan yang efisien.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Fitur
 
-### `npm test`
+- **Berbagai Halaman**: Situs web ini terdiri dari beberapa halaman, termasuk Home, About, Project, KDA, dan Secret.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **UI User Friendly**: Desain antarmuka pengguna (UI) dari situs ini sangat ramah pengguna, sehingga pengunjung dapat dengan mudah menavigasi dan mengeksplor informasi yang disajikan.
 
-### `npm run build`
+- **Responsif**: Situs web ini responsif dan dapat diakses dengan baik di berbagai perangkat, mulai dari desktop hingga ponsel pintar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Teknologi yang Digunakan
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- JSX
+- CSS
+- JavaScript
+- React
+- Tailwind CSS
+- HeadlessUI
+- MySQL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Cara Menggunakan Situs
 
-### `npm run eject`
+Anda dapat mengakses situs ini melalui tautan berikut: [My Own Website](https://contohlinkwebsiteanda.com)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Kontribusi
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Kami sangat menghargai kontribusi! Jika Anda ingin berkontribusi pada situs web ini, silakan buka *issue* atau kirimkan *pull request*. Kami akan dengan senang hati memeriksanya.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Lisensi
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Proyek ini dilisensikan di bawah [Nama Lisensi Anda]. Silakan merujuk ke file [LICENSE](LICENSE) untuk informasi lebih lanjut.
 
-## Learn More
+Terima kasih telah mengunjungi My Own Website!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,6 +1,8 @@
 import "../css/index.css"; // tailwind css
 import Navbar from "../components/navbar";
 import React, { Component } from 'react';
+import { base_url } from "../config";
+import axios from "axios";
 import MatrixRain from '../components/MatrixRain';
 import {SiGithub,SiYoutube,SiSteam,SiDiscord,SiLinkedin} from 'react-icons/si';
 class About extends Component {
@@ -12,17 +14,13 @@ class About extends Component {
             nameIndex: 0,
             names: 'DEVIT ERLINGGA',
             typingSpeed: 150,
-            typingDirection: 1
+            typingDirection: 1,
+            proglanguage: [],
+            about: [],
         };
     }
 
-    componentDidMount() {
-        this.startTyping();
-    }
-
-    componentWillUnmount() {
-        clearTimeout(this.typingTimer);
-    }
+   
 
     startTyping = () => {
         const { nameIndex, names, typingSpeed, typingDirection } = this.state;
@@ -46,6 +44,60 @@ class About extends Component {
         }, typingSpeed);
     };
 
+    getProglanguage=()=>{
+        let url = base_url + "/proglanguage"
+        axios.get(url )
+        .then(response => {
+            this.setState({proglanguage: response.data.data})
+            console.log(response.data.data)
+        })
+        .catch(error => {
+            if (error.response) {
+                if(error.response.status) {
+                    window.alert(error.response.data.message)
+                    console.log(error.response.data.message)
+                    console.log("error status" )
+                }
+            }else{
+                console.log('data show')
+                console.log("data"+this.state.proglanguage)
+                console.log(error);
+            }
+        })
+    }
+
+    getAbout=()=>{
+        let url = base_url + "/about"
+        axios.get(url )
+        .then(response => {
+            this.setState({about: response.data.data})
+            console.log(response.data.data)
+        })
+        .catch(error => {
+            if (error.response) {
+                if(error.response.status) {
+                    window.alert(error.response.data.message)
+                    console.log(error.response.data.message)
+                    console.log("error status" )
+                }
+            }else{
+                console.log('data show')
+                console.log("data"+this.state.about)
+                console.log(error);
+            }
+        })
+    }
+
+    componentDidMount() {
+        this.startTyping();
+        this.getProglanguage();
+        this.getAbout();
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.typingTimer);
+    }
+    
     render() {
         const { typingName } = this.state;
         return (
@@ -59,9 +111,14 @@ class About extends Component {
                         <p className="mt-4 text-base text-gray-300 glowing-text2">
                             Hello! I'm {typingName}
                         </p>
-                        <p className="mt-4 text-base text-gray-300 glowing-text2">
-                        Someone call me Mpiie, I am a human who is currently studying in college, majoring in Software Engineering. I am a website developer mybe mobile developer next!, a cybersecurity enthusiast, and a CTF player.
-                        </p>
+                        {this.state.about.map((item, index) => {
+                            return (
+                                <p key={index} className="mt-4 text-base text-gray-300 glowing-text2">
+                                    {item.description}
+                                </p>
+                            )
+                        }
+                        )}
                     </div>
                     
                 {/* Conetent icon media sosial */}
@@ -118,58 +175,17 @@ class About extends Component {
                             </h3>
                                 {/* dengan tulisan biasah tanpa icon */}
                                 <div className="mt-10 flex flex-wrap justify-center">
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            HTML
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            CSS
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            JS
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            React
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            Tailwind
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            Ahk
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            NodeJS
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            ExpressJS
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            Mysql
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            Laravel
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            PHP
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            Python
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            C++
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            Java
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            Bootstrap
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            JQuery
-                                        </span>
-                                        <span className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
-                                            C
-                                        </span>
-                                    </div>
+                                        {this.state.proglanguage.map((item, index) => {
+                                            return (
+                                                <span key={index} className="px-2 py-1 rounded bg-gray-800 text-xs font-bold mr-3 mb-3">
+                                                    {item.name}
+                                                </span>
+                                            )
+                                        }
+                                        )}
+                                        
+                                        
+                                </div>
                         </div>
                     </div>
 

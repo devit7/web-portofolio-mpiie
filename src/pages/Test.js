@@ -12,11 +12,12 @@ class Test extends Component {
 
             action: "",
             user:[],
-            id: "",
-            name: "",
-            username: "",
-            password: "",
-            role: "",
+            about:[],
+            kda:[],
+            proglanguage:[],
+            programproject:[],
+            project:[],
+
     }
 
 }
@@ -43,8 +44,128 @@ class Test extends Component {
         })
     }
 
+    getAbout=()=>{
+        let url = base_url + "/about"
+        axios.get(url )
+        .then(response => {
+            this.setState({about: response.data.data})
+            console.log(response.data.data)
+        })
+        .catch(error => {
+            if (error.response) {
+                if(error.response.status) {
+                    window.alert(error.response.data.message)
+                    console.log(error.response.data.message)
+                    console.log("error status" )
+                }
+            }else{
+                console.log('data show')
+                console.log("data"+this.state.about)
+                console.log(error);
+            }
+        })
+    }
+
+    getKda=()=>{
+        let url = base_url + "/kda"
+        axios.get(url )
+        .then(response => {
+            this.setState({kda: response.data.data})
+            console.log(response.data.data)
+        })
+        .catch(error => {
+            if (error.response) {
+                if(error.response.status) {
+                    window.alert(error.response.data.message)
+                    console.log(error.response.data.message)
+                    console.log("error status" )
+                }
+            }else{
+                console.log('data show')
+                console.log("data"+this.state.kda)
+                console.log(error);
+            }
+        })
+    }
+
+    getProglanguage=()=>{
+        let url = base_url + "/proglanguage"
+        axios.get(url )
+        .then(response => {
+            this.setState({proglanguage: response.data.data})
+            console.log(response.data.data)
+        })
+        .catch(error => {
+            if (error.response) {
+                if(error.response.status) {
+                    window.alert(error.response.data.message)
+                    console.log(error.response.data.message)
+                    console.log("error status" )
+                }
+            }else{
+                console.log('data show')
+                console.log("data"+this.state.proglanguage)
+                console.log(error);
+            }
+        })
+    }
+
+    getProgramproject=()=>{
+        let url = base_url + "/programproject"
+        axios.get(url )
+        .then(response => {
+            this.setState({programproject: response.data.data})
+            console.log(response.data.data)
+        })
+        .catch(error => {
+            if (error.response) {
+                if(error.response.status) {
+                    window.alert(error.response.data.message)
+                    console.log(error.response.data.message)
+                    console.log("error status" )
+
+                }
+            }else{
+                console.log('data show')
+                console.log("data"+this.state.programproject)
+                console.log(error);
+            }
+        })
+    }
+
+    getProject=()=>{
+        let url = base_url + "/project"
+        axios.get(url )
+        .then(response => {
+            this.setState({project: response.data.data})
+            console.log(response.data.data)
+        })
+        .catch(error => {
+            if (error.response) {
+                if(error.response.status) {
+                    window.alert(error.response.data.message)
+                    console.log(error.response.data.message)
+                    console.log("error status" )
+                }
+            }else{
+                console.log('data show')
+                console.log("data"+this.state.project)
+                console.log(error);
+            }
+        })
+    }
+
+
+
+
+
     componentDidMount(){
         this.getUser()
+        this.getAbout()
+        this.getKda()
+        this.getProglanguage()
+        this.getProgramproject()
+        this.getProject()
     }
 
 
@@ -78,7 +199,122 @@ class Test extends Component {
                             })}
                         </tbody>
                     </table>
+                    <h1>about table</h1>
+                    <table className="border" >
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-gray-700">
+                            {this.state.about.map((item,index) => {
+                                return(
+                                    <tr key={index}>
+                                        <td>{item.id}</td>
+                                        <td>{item.description}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    <h1>kda table</h1>
+                    <table className="border" >
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>category</th>
+                                <th>level</th>
+                                <th>description</th>
+                                <th>link</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-gray-700">
+                            {this.state.kda.map((item,index) => {
+                                return(
+                                    <tr key={index}>
+                                        <td>{item.id}</td>
+                                        <td>{item.category}</td>
+                                        <td>{item.level}</td>
+                                        <td>{item.description}</td>
+                                        <td>{item.link}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    <h1>proglanguage table</h1>
+                    <table className="border" >
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>name</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-gray-700">
+                            {this.state.proglanguage.map((item,index) => {
+                                return(
+                                    <tr key={index}>
+                                        <td>{item.id}</td>
+                                        <td>{item.name}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    <h1>programproject table</h1>
+                    <table className="border" >
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>nama project</th>
+                                <th>nama program yang digunakan</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-gray-700">
+                            {this.state.programproject.map((item,index) => {
+                                return(
+                                    <tr key={index}>
+                                        <td>{item.id}</td>
+                                        <td>{item.nama_project}</td>
+                                        <td>{item.nama_program_yang_digunakan}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    <h1>project table</h1>
+                    <table className="border" >
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>title</th>
+                                <th>description</th>
+                                <th>image</th>
+                                <th>link project</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-gray-700">
+                            {this.state.project.map((item,index) => {
+                                return(
+                                    <tr key={index}>
+                                        <td>{item.id}</td>
+                                        <td>{item.title}</td>
+                                        <td>{item.description}</td>
+                                        <td>{item.image}</td>
+                                        <td>{item.link_project}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+
+
+
+
+
                 </div>
+                
 
     );
   }
