@@ -63,19 +63,50 @@ class Project extends Component {
                 }
             });
     };
+
+    getAll = () => {
+        let projectUrl = base_url + "/project";
+        axios.get(projectUrl)
+            .then(response => {
+                const projectData = response.data.data;
+    
+                // Ambil data program yang digunakan
+                let programUrl = base_url + "/programproject";
+                axios.get(programUrl)
+                    .then(programResponse => {
+                        const programData = programResponse.data.data;
+    
+                        // Gabungkan data program ke dalam data proyek
+                        const updatedProjectData = projectData.map(project => {
+                            const programs = programData.filter(program => program.nama_project === project.title);
+                            return { ...project, programs };
+                        });
+    
+                        // Urutkan data berdasarkan id secara terbalik
+                        const sortedProjects = updatedProjectData.slice().reverse();
+    
+                        this.setState({ project: sortedProjects });
+                    })
+                    .catch(error => {
+                        // Handle error jika permintaan program gagal
+                        console.error(error);
+                    });
+            })
+            .catch(error => {
+                // Handle error jika permintaan proyek gagal
+                console.error(error);
+            });
+    }
+
     
 
 
     componentDidMount() {
         // Ambil data proyek
-        this.getProject();
-
-        
+        this.getAll();
 
     }
     
-    
-
     render() {
         return (
             <div className="bg-slate-950 min-h-screen text-white">
@@ -97,7 +128,6 @@ class Project extends Component {
                             <div className="w-full md:w-1/2 px-4 py-5  sm:p-6">
                                 <h3 className="text-lg leading-6 font-medium text-white glowing-text3">
                                     {item.title}
-                                    {this.getProjectByTitle(item.title)}
                                 </h3>
                                 <div className="mt-2 max-w-md text-sm text-gray-300">
                                         <p  >
@@ -115,7 +145,7 @@ class Project extends Component {
                                 <div>
                                     {/* berisi bahasa pemrograman yang di gunakan dan framefork dengan icon*/}
                                     <div className="mt-2 flex flex-wrap">
-                                    {this.state.projectByTitle.map((lang, index) => {
+                                    {item.programs.map((lang, index) => {
                                         return(
                                             <span
                                                 key={index}
