@@ -1,12 +1,6 @@
 import "../css/index.css"; // tailwind css
 import Navbar from "../components/navbar";
 import React, { Component } from 'react';
-import indo from './img/indo.png';
-import spp from './img/spp.png';
-import valorunt from './img/valorunt.png';
-import call from './img/call.png';
-import own from './img/own-website.png';
-import java from './img/java.png';
 import { base_url } from "../config";
 import axios from "axios";
 
