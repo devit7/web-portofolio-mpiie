@@ -1,6 +1,6 @@
 # My Own Website
 
-![My Own Website](https://lh3.googleusercontent.com/drive-viewer/AITFw-wlliI3wJKoEazuaQAAvUVVNOw6T-LwztIFiw9TcVDpBwAkrqBauQVSl1FVz52kEpgo97LzwxTv5gJXuJ7FXcI7qjeAbQ=s1600)
+![My Own Website](https://iili.io/J27KQjf.png)
 
 Ini adalah situs web portofolio pribadi saya yang dirancang untuk menampilkan pekerjaan saya. Saya telah mengembangkan situs web ini dengan menggunakan teknologi berikut:
 
